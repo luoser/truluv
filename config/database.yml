@@ -9,3 +9,6 @@ default: &default
   pool: 5
   timeout: 5000
 
+development:
+  database: truluv_dev
+  <<: *default
