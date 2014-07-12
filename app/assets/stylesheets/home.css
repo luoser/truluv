@@ -1,7 +1,23 @@
-h1{
+h1 {
 	color: white;
 }
 
-.bk{
+.bk {
 	background-color: #FF583E;
+	background-image: url('paperman.jpg');
+	background-position: center;
+	background-repeat: false;
+	background-attachment: fixed;
+}
+
+.card {
+	width: 30%; 
+	height: 200px; 
+	background: white;
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	opacity: 0.8;
 }
