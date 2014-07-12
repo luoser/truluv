@@ -1,8 +1,9 @@
 class CreateCardsTable < ActiveRecord::Migration
   def change
     create_table :cards_tables do |t|
-    	t.title :string
-    	t.content :string
+    	t.string :title
+    	t.string :content
+    	t.string :category
     	t.timestamps
     end
   end
