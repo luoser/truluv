@@ -15,5 +15,5 @@ development:
 
 production:
   adapter: postgresql
-  database: truluv_dev
+  database: truluv_prod
   <<: *default
