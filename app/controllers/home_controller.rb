@@ -8,7 +8,6 @@ class HomeController < ApplicationController
 		url = 'http://newyork.craigslist.org/search/mis/?query=m4w'
 		@remote_urls = Array.new
 		@blurbs = Array.new
-		@scrape = Crawler.new(url)
 		
 		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
 		rows = doc.css('.row')
