@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-	require 'rubygems'
 	require 'open-uri'
 	require 'nokogiri'
 
