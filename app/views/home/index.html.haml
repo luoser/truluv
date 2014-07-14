@@ -1,19 +1,11 @@
 %h1.text-center
 	truluv'in
 
-.card
-	= Crawler::BASE_CRAIGSLIST_URL
-
-.card
-	"fill me with content"
-
-.card
-	"fill me with content"
-
-.card
-	"fill me with content"
-
-
+%br
+- @blurbs.each do |b|
+	.card
+		.content
+			=b
 
 
 

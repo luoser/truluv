@@ -3,7 +3,7 @@ h1 {
 }
 
 .bk {
-	background-color: #FF583E;
+	/*background-color: #FF583E;*/
 	background-image: url('paperman.jpg');
 	background-position: center;
 	background-repeat: false;
@@ -12,7 +12,7 @@ h1 {
 
 .card {
 	width: 30%; 
-	height: 200px; 
+	height: auto; 
 	background: white;
 	text-align: center;
 	position: relative;
@@ -20,4 +20,8 @@ h1 {
 	margin-right: auto;
 	margin-bottom: 5%;
 	opacity: 0.8;
+}
+
+.content {
+	padding: 5%;
 }

@@ -1,11 +1,19 @@
 require 'rubygems'
-require 'open-uri'
 require 'nokogiri'
+require 'open-uri'
 
 class Crawler
-	BASE_CRAIGSLIST_URL = 'http://newyork.craigslist.org/search/mis/?query=m4w'
-  page = Nokogiri::HTML(open(BASE_CRAIGSLIST_URL))
-  
-	
+
+	def initialize(url)
+    @url = url
+  end
+
+  def get_class_items(class)
+    data.css(class)
+  end
+
+  def data
+    @data ||= Nokogiri::HTML(open(url))
+  end
 
 end
