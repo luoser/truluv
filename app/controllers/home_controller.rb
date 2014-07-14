@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	require 'rubygems'
 	require 'open-uri'
 	require 'nokogiri'
 
@@ -21,7 +22,7 @@ class HomeController < ApplicationController
 				remote_url = root_url + href
 				@remote_urls << root_url
 
-				tdoc = Nokogiri::HTML(open(remote_url))
+				tdoc = Nokogiri::HTML(open(remote_url, 'User-Agent' => 'ruby'))
 				@blurbs << tdoc.at_css('#postingbody').text
 
 			end
