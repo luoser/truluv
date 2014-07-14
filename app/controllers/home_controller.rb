@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 		@remote_urls = Array.new
 		@blurbs = Array.new
 		
-		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
+		doc = Nokogiri::HTML(open(url))
 		rows = doc.css('.row')
 
 		puts doc.at_css('title').text
@@ -21,7 +21,7 @@ class HomeController < ApplicationController
 				remote_url = root_url + href
 				@remote_urls << root_url
 
-				tdoc = Nokogiri::HTML(open(remote_url, 'User-Agent' => 'ruby'))
+				tdoc = Nokogiri::HTML(open(remote_url))
 				@blurbs << tdoc.at_css('#postingbody').text
 
 			end
