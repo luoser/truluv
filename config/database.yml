@@ -12,3 +12,9 @@ default: &default
 development:
   database: truluv_dev
   <<: *default
+
+production:
+  adapter: postgresql
+  database: truluv_dev
+  pool: 5
+  timeout: 5000
