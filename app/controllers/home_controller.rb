@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 		@blurbs = Array.new
 		# @scrape = Crawler.new(url)
 		
-		doc = Nokogiri::HTML(open(url))
+		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
 		rows = doc.css('.row')
 
 		puts doc.at_css('title').text
