@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 		@remote_urls = Array.new
 		@blurbs = Array.new
 		
-		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'poopface'))
+		doc = Nokogiri::HTML(open(url))
 		rows = doc.css('.row')
 
 		puts doc.at_css('title').text
