@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 				remote_url = root_url + href
 				@remote_urls << root_url
 
-				tdoc = Nokogiri::HTML(open(remote_url, 'User-Agent' => 'ruby'))
+				tdoc = Nokogiri::HTML(open(remote_url, 'User-Agent' => 'Ruby'))
 				@blurbs << tdoc.at_css('#postingbody').text
 
 			end

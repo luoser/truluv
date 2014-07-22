@@ -1,7 +1,5 @@
 class CardsController < ApplicationController
 
-	BASE_CRAIGSLIST_URL = 'http://newyork.craigslist.org/search/mis/?query=m4w'
-
 	def index
 		@cards = Card.all
 	end
