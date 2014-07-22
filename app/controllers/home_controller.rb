@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-	require 'nokogiri'
 
 	def index
 		root_url = 'http://newyork.craigslist.org/'
@@ -7,7 +6,7 @@ class HomeController < ApplicationController
 		@remote_urls = Array.new
 		@blurbs = Array.new
 		
-		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby2'))
+		doc = Nokogiri::HTML(open(url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE, 'User-Agent' => 'ruby'))
 		rows = doc.css('.row')
 
 		rows[1..10].each do |row|
@@ -17,7 +16,7 @@ class HomeController < ApplicationController
 				remote_url = root_url + href
 				@remote_urls << root_url
 
-				tdoc = Nokogiri::HTML(open(remote_url, 'User-Agent' => 'ruby3'))
+				tdoc = Nokogiri::HTML(open(remote_url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE, 'User-Agent' => 'ruby'))
 				@blurbs << tdoc.at_css('#postingbody').text
 
 			end
