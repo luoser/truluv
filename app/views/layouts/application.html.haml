@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 %html
 %head
-  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
-  %title truluv'in
+	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+	= stylesheet_link_tag '/assets/mfglabs_iconset.css'
+
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+	%title truluv'in
 
 %body.bk
-.container
-= yield
+	%div.header
+		%h1.text-center
+			truluv'in
+	%div.footer
+		%a{href: 'https://twitter.com/luoser', target: '_blank'}
+			%i.icon-twitter_circle.icon2x
+		%a{href: 'https://github.com/luoser', target: '_blank'}
+			%i.icon-git_circle.icon2x
+
+	%div.container
+		= yield
+

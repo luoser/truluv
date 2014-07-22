@@ -1,13 +1,31 @@
 h1 {
-	color: white;
+	color: #FF583E;
+	top: 0;
+	left: 0;
+	right: 0;
+	heigh: 0;
+	position: fixed;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration:none;
 }
 
 .bk {
 	/*background-color: #FF583E;*/
-	background-image: url('paperman.jpg');
+	/*background-image: url('paperman.jpg');*/
 	background-position: center;
 	background-repeat: false;
 	background-attachment: fixed;
+}
+
+.header {
+	position: fixed;
+	background-color: white;
+	height: 7%;
+	top: 0px;
+	width: 100%;
+	z-index: 100
 }
 
 .card {
@@ -23,5 +41,13 @@ h1 {
 }
 
 .content {
+	margin-top: 30%;
 	padding: 5%;
+}
+
+.footer {
+	position: fixed;
+	bottom: 2%;
+	margin-left: 2%;
+  width:50%;
 }
