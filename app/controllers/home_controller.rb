@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
 		rows = doc.css('.row')
 
-		rows[2..11].each do |row|
+		rows[1..11].each do |row|
 			hrefs = row.css('a').map{ |x|
 				x['href']}.compact.uniq
 			hrefs.each do |href|
