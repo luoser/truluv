@@ -1,8 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'nokogiri'
 require 'open-uri'
+require 'nokogiri'
 
 
 # Require the gems listed in Gemfile, including any gems
