@@ -1,12 +1,14 @@
+require 'open-uri'
+
 class HomeController < ApplicationController
 
 	def index
 		root_url = 'http://newyork.craigslist.org/'
-		url = 'http://newyork.craigslist.org/search/mis/?query=m4w'
+		url = open('http://newyork.craigslist.org/search/mis/?query=m4w')
 		@remote_urls = Array.new
 		@blurbs = Array.new
 		
-		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
+		doc = Nokogiri::HTML(url)
 		rows = doc.css('.row')
 
 		rows[1..11].each do |row|
