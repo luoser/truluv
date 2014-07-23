@@ -6,8 +6,13 @@ class HomeController < ApplicationController
 		@remote_urls = Array.new
 		@blurbs = Array.new
 		
-		doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
-		rows = doc.css('.row')
+		begin
+			doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
+			rows = doc.css('.row')
+		rescue
+			flash[:notice] = 'Could not open root url.'
+			render :nothing => true
+		end
 
 		rows[1..11].each do |row|
 			hrefs = row.css('a').map{ |x|
