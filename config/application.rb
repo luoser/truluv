@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 require 'nokogiri'
-# require 'open-uri'
+require 'open-uri'
 
 
 # Require the gems listed in Gemfile, including any gems
@@ -12,7 +12,7 @@ Bundler.require(*Rails.groups)
 module Truluv
   class Application < Rails::Application
     config.assets.version = '1.0'
-    config.action_controller.perform_caching = true
+    config.action_controller.perform_caching = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
