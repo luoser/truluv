@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 		@blurbs = Array.new
 		
 		begin
-			doc = Nokogiri::HTML(open(url, nil, 'UTF-8')
+			doc = Nokogiri::HTML(open(url), nil, 'UTF-8')
 			rows = doc.css('.row')
 		rescue
 			flash[:notice] = 'Could not open root url.'
