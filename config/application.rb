@@ -12,7 +12,7 @@ Bundler.require(*Rails.groups)
 module Truluv
   class Application < Rails::Application
     config.assets.version = '1.0'
-    config.action_controller.perform_caching = false
+    config.action_controller.perform_caching = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
