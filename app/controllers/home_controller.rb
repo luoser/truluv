@@ -26,7 +26,7 @@ class HomeController < ApplicationController
 			end
 		rescue
 			puts 'could not access url'
-			render 'error'
+			render partial: 'error'
 		end
 	end
 
