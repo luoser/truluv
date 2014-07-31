@@ -2,7 +2,6 @@
 %html
 %head
 	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-	= stylesheet_link_tag 'mfglabs_iconset.css'
 	= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'
 	= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cedarville+Cursive'
 
@@ -16,9 +15,9 @@
 			truluv'in
 	%div.footer
 		%a{href: 'https://twitter.com/luoser', target: '_blank'}
-			%i.icon-twitter_circle.icon2x
+			%i.fa.fa-twitter-square.icon2x
 		%a{href: 'https://github.com/luoser', target: '_blank'}
-			%i.icon-git_circle.icon2x
+			%i.fa.fa-github-square.icon2x
 
 	%div.container
 		= yield
