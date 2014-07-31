@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 		@remote_urls = Array.new
 		@blurbs = Array.new
 
-		if stale?(etag: @blurbs)
+		begin
 			doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
 			rows = doc.css('.row')
 
@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 					@blurbs << tdoc.at_css('#postingbody').text
 				end
 			end
-		else
+		rescue
 			puts 'could not access url'
 			render partial: 'error'
 		end
