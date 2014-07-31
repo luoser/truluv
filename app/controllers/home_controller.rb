@@ -6,10 +6,11 @@ class HomeController < ApplicationController
 	def index
 		root_url = 'http://newyork.craigslist.org/'
 		url = 'http://newyork.craigslist.org/search/mis/?query=m4w'
-		@remote_urls = Array.new
-		@blurbs = Array.new
-
+		
 		begin
+			@remote_urls = Array.new
+			@blurbs = Array.new
+
 			doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
 			rows = doc.css('.row')
 
