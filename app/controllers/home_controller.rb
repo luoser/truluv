@@ -25,6 +25,7 @@ class HomeController < ApplicationController
 				end
 			end
 		rescue
+			puts 'could not access url'
 			render :nothing => true
 		end
 	end
