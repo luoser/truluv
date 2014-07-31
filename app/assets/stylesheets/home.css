@@ -5,6 +5,7 @@ h1 {
 	right: 0;
 	heigh: 0;
 	position: fixed;
+	font-family: 'Cedarville Cursive', cursive;
 }
 
 a:hover, a:visited, a:link, a:active {
@@ -41,8 +42,11 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .content {
-	margin-top: 30%;
+	margin-top: 20%;
 	padding: 5%;
+	font-size: 222%;
+	font-family: 'Cedarville Cursive', cursive;
+	line-height: 120%;
 }
 
 .footer {
