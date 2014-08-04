@@ -4,14 +4,8 @@ development:
   pool: 5
   password:
 
-test:
-  adapter: postgresql
-  database: truluv_dev
-  pool: 5
-  timeout: 5000
-
 production:
   adapter: postgresql
-  database: truluv_prod
+  database: truluv_dev
   pool: 5
   timeout: 5000
