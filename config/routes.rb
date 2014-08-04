@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'blurbs#index'
+  resources 'blurbs'
+
 end
