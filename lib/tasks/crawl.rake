@@ -21,9 +21,5 @@ task :crawl_m4w => :environment do
 
 		end
 	end
-
-	heroku pg:reset DATABASE
-	heroku pg:push truluv_dev DATABASE_URL 
-
 end
 
