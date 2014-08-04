@@ -6,6 +6,6 @@ development:
 
 production:
   adapter: postgresql
-  database: truluv_dev
+  database: truluv_prod
   pool: 5
   timeout: 5000
