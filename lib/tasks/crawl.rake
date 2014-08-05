@@ -10,7 +10,7 @@ task :crawl_m4w => :environment do
 	doc = Nokogiri::HTML(open(url))
 	rows = doc.css('.row')
 
-	rows[1..10].each do |row|
+	rows.each do |row|
 		hrefs = row.css('a').map{ |x| x['href'] }.compact.uniq
 		hrefs.each do |href|
 			remote_url = root_url + href
