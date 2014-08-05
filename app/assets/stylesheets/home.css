@@ -37,6 +37,7 @@ a:hover, a:visited, a:link, a:active {
 	margin-right: auto;
 	margin-bottom: 5%;
 	opacity: 0.8;
+	z-index: -1
 }
 
 .content {
@@ -54,13 +55,14 @@ a:hover, a:visited, a:link, a:active {
   width:50%;
 }
 
-#menu-toggle {
+.menu-toggle {
 	position: relative;
   -webkit-appearance: none;
   z-index: 100;
   padding: 1%;
+  padding-right: 2.5%;
   text-align: right;
-  color: #FF583E;
+  
 }
 
 #site-wrapper {
@@ -69,6 +71,28 @@ a:hover, a:visited, a:link, a:active {
     width: 100%;
     top: 0; /* Temp: Simulates a tall page. */
     bottom: 0;
+}
+
+.red-icon {
+	color: #FF583E;
+}
+
+.red-icon:hover {
+	color: #FF6E57;
+}
+
+.twitter-icon {
+	color: #7EFFA0;
+}
+.twitter-icon:hover {
+	color: #59ADEB;
+}
+
+.github-icon {
+	color: #7EFFA0;
+}
+.github-icon:hover {
+	color: black;
 }
 
 #site-canvas {
@@ -89,10 +113,10 @@ a:hover, a:visited, a:link, a:active {
     position: fixed;
     top: 0;
     right: -300px;
-    /*background: #428bca;*/
-    background: white;
+    background: #7EFFA0;	/* mint green */
+    z-index: 200;
     padding: 1%;
-    color: #428bca;
+    color: white;
 }
 
 #site-wrapper.show-nav #site-canvas {

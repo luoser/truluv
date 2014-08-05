@@ -29,29 +29,24 @@
 		#site-canvas
 			#site-menu
 				%h2 Categories
-				%p style it
-				%ul
-					.li
-						Hey
-					.li
-						Ho
-				%h2 Pick Some Traits!
+				
+				%h2 Trait Cloud
 
 			
 	.header
-		#menu-toggle
-			%a.toggle-nav.fa.fa-heart.icon2x
+		.menu-toggle
+			%a.toggle-nav.fa.fa-heart.icon2x.red-icon
 		%h1.text-center
 			truluv'in			
 
 
 
-	%div.footer
+	.footer
 		%a{href: 'https://twitter.com/luoser', target: '_blank'}
-			%i.fa.fa-twitter-square.icon2x
+			%i.fa.fa-twitter-square.icon2x.twitter-icon
 		%a{href: 'https://github.com/luoser', target: '_blank'}
-			%i.fa.fa-github-square.icon2x
+			%i.fa.fa-github-square.icon2x.github-icon
 
-	%div.container
+	.container
 		= yield
 
