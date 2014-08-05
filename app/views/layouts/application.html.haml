@@ -7,12 +7,45 @@
 
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
+
+	:javascript
+		$(function() {
+			$('.toggle-nav').click(function() {
+				if ($('#site-wrapper').hasClass('show-nav')) {
+					$('#site-wrapper').removeClass('show-nav');
+		    } 
+		    else {
+		    	$('#site-wrapper').addClass('show-nav');
+		    }
+			})
+		})
+
 	%title truluv'in
 
 %body.bk
-	%div.header
+	
+	/ Slidey menu!
+	#site-wrapper
+		#site-canvas
+			#site-menu
+				%h2 Categories
+				%p style it
+				%ul
+					.li
+						Hey
+					.li
+						Ho
+				%h2 Pick Some Traits!
+
+			
+	.header
+		#menu-toggle
+			%a.toggle-nav.fa.fa-heart.icon2x
 		%h1.text-center
-			truluv'in
+			truluv'in			
+
+
+
 	%div.footer
 		%a{href: 'https://twitter.com/luoser', target: '_blank'}
 			%i.fa.fa-twitter-square.icon2x
