@@ -4,6 +4,7 @@
 	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 	= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'
 	= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cedarville+Cursive'
+	= stylesheet_link_tag 'buttons.css'
 
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
@@ -28,9 +29,28 @@
 	#site-wrapper
 		#site-canvas
 			#site-menu
-				%h2 Categories
+				%h2.ineedsomespace Categories
+				%p.text-center
+					%a.button.button-pill.button-flat
+						%i.fa.fa-male
+						%i.fa.fa-male
+					%a.button.button-pill.button-flat
+						%i.fa.fa-male
+						%i.fa.fa-female
+					%a.button.button-pill.button-flat
+						%i.fa.fa-female
+						%i.fa.fa-female
+
+				.ineedsomespace
+				.ineedsomespace
+				%h2 Looking for that special someone?
+				.text-center
+					.ineedsomespace
+					%i.fa.fa-cloud.icon3x
+					%p tag cloud coming soon!
+					%i.fa.fa-cloud.icon3x.elbowroomplease
+					%i.fa.fa-cloud.icon3x
 				
-				%h2 Trait Cloud
 			
 	.header
 		.menu-toggle
